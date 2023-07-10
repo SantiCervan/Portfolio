@@ -1,19 +1,18 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from './NavBar';
 import Perfil from './Perfil';
 import Head from 'next/head';
 
 function index() {
+  const [darkMode, setDarkMode] = useState(false);
   useEffect(() => {
     const handleVisibilityChange = () => {
       document.title = document.hidden
-        ? 'SC - ¡No te pierdas mi trabajo! '
+        ? "SC - Don't miss out on my work!"
         : 'Santiago Cervan - Front end';
     };
-
     document.addEventListener('visibilitychange', handleVisibilityChange);
-
     return () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
@@ -25,14 +24,20 @@ function index() {
         <title>Santiago Cervan - Front end</title>
         <meta
           property="og:description"
-          content="Descubre mi portafolio de desarrollo frontend. Explora proyectos innovadores y soluciones creativas."
+          content="Explore my frontend development portfolio. Discover innovative projects and creative solutions."
         />
         <meta property="og:image" content="/Img/metaImage.png" />
       </Head>
-      <div className="w-full min-h-screen flex flex-col items-center bg-gradient-to-b from-slate-200 to-teal-100">
-        <NavBar />
-        <Perfil />
-        <Perfil />
+      <div
+        className={`w-full min-h-screen flex flex-col items-center ${
+          darkMode
+            ? 'bg-gradient-to-b from-zinc-950 to-teal-950'
+            : 'bg-gradient-to-b from-slate-200 to-teal-100'
+        }`}
+      >
+        <NavBar setDarkMode={setDarkMode} darkMode={darkMode} />
+        <Perfil setDarkMode={setDarkMode} darkMode={darkMode} />
+        <Perfil setDarkMode={setDarkMode} darkMode={darkMode} />
       </div>
     </>
   );

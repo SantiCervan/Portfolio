@@ -2,10 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import Photo from '../public/Img/20211120_152652-02 (1)-01.jpeg';
 import { motion } from 'framer-motion';
+import { Generals } from './entities/generals';
 
-function Perfil() {
+function Perfil({ setDarkMode, darkMode }: Generals) {
   return (
-    <div className="w-4/5 h-screen pt-32">
+    <div className={`w-4/5 h-screen pt-32 ${darkMode ? 'text-white' : ''}`}>
       <div className="h-[90%] w-full flex">
         <div className="w-[60%]">
           <motion.h1
