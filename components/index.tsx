@@ -27,7 +27,7 @@ function index() {
           property="og:description"
           content="Descubre mi portafolio de desarrollo frontend. Explora proyectos innovadores y soluciones creativas."
         />
-        <meta property="og:image" content="/public/Img/metaImage.png" />
+        <meta property="og:image" content="/Img/metaImage.png" />
       </Head>
       <div className="w-full min-h-screen flex flex-col items-center bg-gradient-to-b from-slate-200 to-teal-100">
         <NavBar />
