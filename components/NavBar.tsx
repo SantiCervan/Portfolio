@@ -51,10 +51,10 @@ function NavBar() {
         </div>
       </motion.div>
       <div className="flex">
-        <button className="w-20 text-lg font-semibold text-white">Algo</button>
+        {/* <button className="w-20 text-lg font-semibold text-white">Algo</button>
         <button className="w-20 text-lg font-semibold text-white">
           Contact
-        </button>
+        </button> */}
       </div>
     </div>
   );
