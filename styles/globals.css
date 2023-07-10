@@ -2,6 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Cambiar el color de la barra de desplazamiento en WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+  /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  /* Color del fondo de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888888bd;
+  /* Color del pulgar de la barra de desplazamiento */
+}
+
+/* Cambiar el color de la barra de desplazamiento en Firefox */
+/* Nota: Para Firefox, actualmente solo se admite el cambio del color del pulgar de la barra de desplazamiento */
+/* Se requiere Firefox 64 o superior para el soporte completo de la personalización de la barra de desplazamiento */
+/* Si utilizas una versión anterior, el color del pulgar de la barra de desplazamiento no se cambiará */
+* {
+  scrollbar-color: #888888bd #f1f1f1;
+  /* Color del pulgar y fondo de la barra de desplazamiento */
+}
+
+/* Cambiar el color de la barra de desplazamiento en Edge y navegadores basados en Chromium */
+/* Nota: Edge y otros navegadores basados en Chromium actualmente usan las propiedades de WebKit */
+/* Para asegurarte de que los cambios se apliquen en estos navegadores, incluye también los estilos de WebKit */
+* {
+  scrollbar-width: thin;
+  /* Ancho de la barra de desplazamiento */
+  scrollbar-color: #888888bd #f1f1f1;
+  /* Color del pulgar y fondo de la barra de desplazamiento */
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
