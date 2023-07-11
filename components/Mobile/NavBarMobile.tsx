@@ -5,57 +5,37 @@ import Image from 'next/image';
 import sol from '../../public/Icons/sol.png';
 import luna from '../../public/Icons/luna.png';
 function NavBar({ setDarkMode, darkMode, setSpanish, spanish }: Generals) {
-  const [isHovered, setIsHovered] = useState(false);
-  const [isHoveredSwitch, setIsHoveredSwitch] = useState(false);
-  const handleHover = () => {
-    setIsHovered(true);
-  };
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-  const handleHoverSwitch = () => {
-    setIsHoveredSwitch(true);
-  };
-  const handleMouseLeaveSwitch = () => {
-    setIsHoveredSwitch(false);
-  };
   const toggleSwitch = () => setDarkMode(!darkMode);
   return (
     <div className="w-full flex justify-between px-3 py-6 fixed top-0 mix-blend-exclusion items-center text-white z-50">
       <motion.div
-        initial={{ width: 67 }}
-        animate={isHovered ? { width: 170 } : { width: 67 }}
-        transition={{}}
+        initial={{ width: 170 }}
+        animate={{ width: 67 }}
+        transition={{ delay: 2, duration: 1.8 }}
         className="flex gap-1 text-lg font-semibold px-4 py-2 border-4 border-white cursor-default h-13 non-selectable"
-        onMouseEnter={handleHover}
-        onMouseLeave={handleMouseLeave}
       >
         <div className="flex ">
           <p>S</p>
           <motion.p
-            initial={{ opacity: 0, x: -20 }}
-            animate={
-              isHovered ? { opacity: 100, x: 0 } : { opacity: 0, x: -20 }
-            }
-            transition={{ easing: 'linear' }}
+            initial={{ opacity: 100, x: 0 }}
+            animate={{ opacity: 0, x: -20 }}
+            transition={{ easing: 'linear', delay: 2, duration: 0.8 }}
           >
             antiago
           </motion.p>
         </div>
         <div className="flex ">
           <motion.p
-            initial={{ x: -60 }}
-            animate={isHovered ? { x: 0 } : { x: -60 }}
-            transition={{ easing: 'linear' }}
+            initial={{ x: 0 }}
+            animate={{ x: -60 }}
+            transition={{ easing: 'linear', delay: 2, duration: 1.8 }}
           >
             C
           </motion.p>
           <motion.p
-            initial={{ opacity: 0, x: -20 }}
-            animate={
-              isHovered ? { opacity: 100, x: 0 } : { opacity: 0, x: -20 }
-            }
-            transition={{ easing: 'linear' }}
+            initial={{ opacity: 100, x: 0 }}
+            animate={{ opacity: 0, x: -20 }}
+            transition={{ easing: 'linear', delay: 2, duration: 0.8 }}
           >
             ervan
           </motion.p>
@@ -94,8 +74,6 @@ function NavBar({ setDarkMode, darkMode, setSpanish, spanish }: Generals) {
               darkMode ? 'items-end' : 'items-start'
             }`}
             onClick={toggleSwitch}
-            onMouseEnter={handleHoverSwitch}
-            onMouseLeave={handleMouseLeaveSwitch}
           >
             <motion.div
               className="bg-black w-4 h-6"
@@ -108,7 +86,7 @@ function NavBar({ setDarkMode, darkMode, setSpanish, spanish }: Generals) {
           <motion.div
             initial={{ opacity: 0, x: 2 }}
             animate={{ opacity: 100, x: 0 }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 1, duration: 1 }}
             className="flex flex-col h-12 justify-between items-center pointer-events-none"
           >
             <Image src={sol} width={20} height={20} alt="sun" />

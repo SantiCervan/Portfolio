@@ -8,7 +8,7 @@ import PerfilMobile from './Mobile/PerfilMobile';
 function Perfil({ setDarkMode, darkMode }: Generals) {
   return (
     <>
-      <div className="inline sm:hidden">
+      <div className="flex justify-center sm:hidden w-full">
         <PerfilMobile setDarkMode={setDarkMode} darkMode={darkMode} />
       </div>
       <div
