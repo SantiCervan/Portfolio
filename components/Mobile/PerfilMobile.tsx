@@ -37,7 +37,7 @@ function PerfilMobile({ setDarkMode, darkMode }: Generals) {
             dragConstraints={{
               top: -50,
               left: -50,
-              right: 50,
+              right: -20,
               bottom: 150,
             }}
             className="relative"

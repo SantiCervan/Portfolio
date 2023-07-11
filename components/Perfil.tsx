@@ -12,7 +12,7 @@ function Perfil({ setDarkMode, darkMode }: Generals) {
         <PerfilMobile setDarkMode={setDarkMode} darkMode={darkMode} />
       </div>
       <div
-        className={`sm:inline hidden w-4/5 h-[90vh] pt-32 ${
+        className={`sm:inline hidden w-4/5 h-screen pt-32 ${
           darkMode ? 'text-white' : ''
         }`}
       >

@@ -33,39 +33,39 @@ function NavBar({ setDarkMode, darkMode, setSpanish, spanish }: Generals) {
       </div>
       <div className="hidden w-full sm:flex justify-between px-16 py-6 fixed top-0 mix-blend-exclusion items-center text-white z-50">
         <motion.div
-          initial={{ width: 67 }}
+          initial={{ width: 170 }}
           animate={isHovered ? { width: 170 } : { width: 67 }}
-          transition={{}}
+          transition={{ duration: 1 }}
           className="flex gap-1 text-lg font-semibold px-4 py-2 border-4 border-white cursor-default h-13 non-selectable"
           onMouseEnter={handleHover}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="flex ">
+          <div className="flex">
             <p>S</p>
             <motion.p
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 100, x: 0 }}
               animate={
                 isHovered ? { opacity: 100, x: 0 } : { opacity: 0, x: -20 }
               }
-              transition={{ easing: 'linear' }}
+              transition={{ easing: 'linear', duration: 1 }}
             >
               antiago
             </motion.p>
           </div>
-          <div className="flex ">
+          <div className="flex">
             <motion.p
-              initial={{ x: -60 }}
+              initial={{ x: 0 }}
               animate={isHovered ? { x: 0 } : { x: -60 }}
-              transition={{ easing: 'linear' }}
+              transition={{ easing: 'linear', duration: 1 }}
             >
               C
             </motion.p>
             <motion.p
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 100, x: 0 }}
               animate={
                 isHovered ? { opacity: 100, x: 0 } : { opacity: 0, x: -20 }
               }
-              transition={{ easing: 'linear' }}
+              transition={{ easing: 'linear', duration: 1 }}
             >
               ervan
             </motion.p>
