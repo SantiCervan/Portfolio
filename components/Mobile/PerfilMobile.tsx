@@ -30,7 +30,7 @@ function PerfilMobile({ setDarkMode, darkMode }: Generals) {
         </div>
         <div className="h-full w-[40%] flex justify-end items-center pt-20 xs:pt-36 z-0">
           <motion.div
-            initial={{ x: 12, opacity: 0, rotate: 5 }}
+            initial={{ x: 3, opacity: 0, rotate: 5 }}
             animate={{ x: 0, opacity: 100, rotate: 0 }}
             transition={{ duration: 1 }}
             className="relative"
