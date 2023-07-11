@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import NavBar from './NavBar';
 import Perfil from './Perfil';
 import Head from 'next/head';
+import Habilities from './Habilities';
 
 function index() {
   const [darkMode, setDarkMode] = useState(false);
@@ -49,12 +50,7 @@ function index() {
           setSpanish={setSpanish}
           spanish={spanish}
         />
-        <Perfil
-          setDarkMode={setDarkMode}
-          darkMode={darkMode}
-          setSpanish={setSpanish}
-          spanish={spanish}
-        />
+        <Habilities />
       </div>
     </>
   );
