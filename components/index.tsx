@@ -6,6 +6,8 @@ import Head from 'next/head';
 
 function index() {
   const [darkMode, setDarkMode] = useState(false);
+  const [spanish, setSpanish] = useState(false);
+
   useEffect(() => {
     const handleVisibilityChange = () => {
       document.title = document.hidden
@@ -31,13 +33,28 @@ function index() {
       <div
         className={`w-full min-h-screen flex flex-col items-center ${
           darkMode
-            ? 'bg-gradient-to-b from-zinc-950 to-teal-950'
+            ? 'bg-gradient-to-b from-zinc-950 to-red-950'
             : 'bg-gradient-to-b from-slate-200 to-teal-100'
         }`}
       >
-        <NavBar setDarkMode={setDarkMode} darkMode={darkMode} />
-        <Perfil setDarkMode={setDarkMode} darkMode={darkMode} />
-        <Perfil setDarkMode={setDarkMode} darkMode={darkMode} />
+        <NavBar
+          setDarkMode={setDarkMode}
+          darkMode={darkMode}
+          setSpanish={setSpanish}
+          spanish={spanish}
+        />
+        <Perfil
+          setDarkMode={setDarkMode}
+          darkMode={darkMode}
+          setSpanish={setSpanish}
+          spanish={spanish}
+        />
+        <Perfil
+          setDarkMode={setDarkMode}
+          darkMode={darkMode}
+          setSpanish={setSpanish}
+          spanish={spanish}
+        />
       </div>
     </>
   );
