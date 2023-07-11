@@ -33,6 +33,13 @@ function PerfilMobile({ setDarkMode, darkMode }: Generals) {
             initial={{ x: 3, opacity: 0, rotate: 5 }}
             animate={{ x: 0, opacity: 100, rotate: 0 }}
             transition={{ duration: 1 }}
+            drag
+            dragConstraints={{
+              top: -50,
+              left: -50,
+              right: 50,
+              bottom: 150,
+            }}
             className="relative"
           >
             <Image
