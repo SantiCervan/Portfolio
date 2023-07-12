@@ -143,7 +143,7 @@ const GraphMobile = () => {
           chosen: false,
           font: {
             color: 'white',
-            size: 30, // px
+            size: 40, // px
             bold: {
               color: 'black',
               face: 'courier new',
@@ -154,7 +154,7 @@ const GraphMobile = () => {
           labelHighlightBold: true,
           mass: 2,
           shape: 'circle',
-          size: 35,
+          size: 55,
         },
         edges: {
           arrowStrikethrough: true,
