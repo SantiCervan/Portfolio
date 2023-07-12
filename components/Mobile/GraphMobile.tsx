@@ -4,7 +4,7 @@ import { Network } from 'vis-network';
 import { Edge } from 'vis-network';
 import { motion } from 'framer-motion';
 
-const Graph = () => {
+const GraphMobile = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -210,10 +210,10 @@ const Graph = () => {
       transition={{ duration: 1 }}
       viewport={{ once: true }}
       ref={containerRef}
-      style={{ height: '80vh' }}
+      style={{ height: '50vh' }}
       className="w-full"
     />
   );
 };
 
-export default Graph;
+export default GraphMobile;
