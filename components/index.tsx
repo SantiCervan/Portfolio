@@ -4,6 +4,7 @@ import NavBar from './NavBar';
 import Perfil from './Perfil';
 import Head from 'next/head';
 import Skills from './Skills';
+import Experience from './Experience';
 
 function index() {
   const [darkMode, setDarkMode] = useState(false);
@@ -13,7 +14,7 @@ function index() {
     useEffect(() => {
       const handleVisibilityChange = () => {
         document.title = document.hidden
-          ? '⚠ ¡No te pierdas mi trabajo!'
+          ? '¡No te pierdas mi trabajo!'
           : 'Santiago Cervan - Front end';
       };
       document.addEventListener('visibilitychange', handleVisibilityChange);
@@ -28,7 +29,7 @@ function index() {
     useEffect(() => {
       const handleVisibilityChange = () => {
         document.title = document.hidden
-          ? "⚠ Don't miss out on my work!"
+          ? "Don't miss out on my work!"
           : 'Santiago Cervan - Front end';
       };
       document.addEventListener('visibilitychange', handleVisibilityChange);
@@ -66,6 +67,7 @@ function index() {
         />
         <Perfil spanish={spanish} />
         <Skills spanish={spanish} />
+        <Experience darkMode={darkMode} spanish={spanish} />
       </div>
     </>
   );

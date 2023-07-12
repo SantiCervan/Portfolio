@@ -7,3 +7,7 @@ export interface Generals {
 export interface Spanish {
   spanish: boolean;
 }
+export interface DarkSpanish {
+  darkMode: boolean;
+  spanish: boolean;
+}

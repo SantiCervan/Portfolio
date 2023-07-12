@@ -18,7 +18,7 @@ function Perfil({ spanish }: Spanish) {
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 100 }}
               transition={{ duration: 1 }}
-              className="text-[5rem] font-bold mix-blend-exclusion text-white"
+              className="text-[6rem] font-bold mix-blend-exclusion text-white"
             >
               Santiago Cervan
             </motion.h1>
