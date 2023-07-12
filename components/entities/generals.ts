@@ -4,3 +4,6 @@ export interface Generals {
   setSpanish?: (spanish: boolean) => void;
   spanish?: boolean;
 }
+export interface Spanish {
+  spanish: boolean;
+}

@@ -2,15 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import Photo from '../../public/Img/20211120_152652-02 (1)-01.jpeg';
 import { motion } from 'framer-motion';
-import { Generals } from '../entities/generals';
-
-function PerfilMobile({ setDarkMode, darkMode }: Generals) {
+import { Spanish } from '../entities/generals';
+import scroll from '../../public/Icons/abajo.png';
+function PerfilMobile({ spanish }: Spanish) {
   return (
-    <div
-      className={`w-full px-1 h-screen pt-20 ${darkMode ? 'text-white' : ''}`}
-    >
-      <div className="h-[80%] xs:h-[90%] w-full flex">
-        <div className="w-[60%]">
+    <div className="w-full px-1 h-screen pt-20 text-white">
+      <div className="h-[80%] xs:h-[90%] w-full flex flex-col items-end">
+        <div className="w-full">
           <motion.h1
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 100 }}
@@ -23,12 +21,12 @@ function PerfilMobile({ setDarkMode, darkMode }: Generals) {
             initial={{ y: 160, opacity: 0 }}
             animate={{ y: 0, opacity: 100 }}
             transition={{ duration: 1.2 }}
-            className="text-[3rem] xs:text-[4rem] font-semibold pl-3 mix-blend-exclusion text-white z-40 absolute w-20 leading-tight"
+            className="text-[3rem] xs:text-[4rem] font-semibold pl-3 mix-blend-exclusion text-white z-40 absolute w-full leading-tight break-words"
           >
-            Front End Developer
+            {spanish ? 'Desarrollador Front End' : 'Front End Developer'}
           </motion.h2>
         </div>
-        <div className="h-full w-[40%] flex justify-end items-center pt-20 xs:pt-36 z-0">
+        <div className="h-full w-[40%] flex justify-end items-end pt-20 xs:pt-36 z-0">
           <motion.div
             initial={{ x: 3, opacity: 0, rotate: 5 }}
             animate={{ x: 0, opacity: 100, rotate: 0 }}
@@ -37,8 +35,8 @@ function PerfilMobile({ setDarkMode, darkMode }: Generals) {
             dragConstraints={{
               top: -50,
               left: -50,
-              right: -20,
-              bottom: 150,
+              right: -60,
+              bottom: 20,
             }}
             className="relative"
           >
@@ -52,12 +50,22 @@ function PerfilMobile({ setDarkMode, darkMode }: Generals) {
           </motion.div>
         </div>
       </div>
-      <div className={`h-[10%] w-full flex-col justify-between`}>
+      <div className={`h-[10%] w-full flex-col justify-between relative`}>
+        <motion.div
+          initial={{ y: 160, opacity: 0 }}
+          animate={{ y: 0, opacity: 100 }}
+          transition={{ duration: 1, delay: 4 }}
+          className="animate-bounce absolute -top-5 right-1 mix-blend-exclusion"
+        >
+          <Image src={scroll} alt="Scroll" width={40} height={40} />
+        </motion.div>
         <p className="uppercase font-semibold mix-blend-exclusion text-white">
-          From Argentina
+          {spanish ? 'Argentino' : 'From Argentina'}
         </p>
         <p className="uppercase font-semibold mix-blend-exclusion text-white text-sm">
-          Available to companies anywhere in the world
+          {spanish
+            ? 'Disponible para empresas de todo el mundo'
+            : 'Available to companies anywhere in the world'}
         </p>
       </div>
     </div>
