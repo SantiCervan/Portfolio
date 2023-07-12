@@ -9,17 +9,37 @@ function index() {
   const [darkMode, setDarkMode] = useState(false);
   const [spanish, setSpanish] = useState(false);
 
-  useEffect(() => {
-    const handleVisibilityChange = () => {
-      document.title = document.hidden
-        ? "SC - Don't miss out on my work!"
-        : 'Santiago Cervan - Front end';
-    };
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-    return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-    };
-  }, []);
+  if (spanish) {
+    useEffect(() => {
+      const handleVisibilityChange = () => {
+        document.title = document.hidden
+          ? '⚠ ¡No te pierdas mi trabajo!'
+          : 'Santiago Cervan - Front end';
+      };
+      document.addEventListener('visibilitychange', handleVisibilityChange);
+      return () => {
+        document.removeEventListener(
+          'visibilitychange',
+          handleVisibilityChange
+        );
+      };
+    }, [spanish]);
+  } else {
+    useEffect(() => {
+      const handleVisibilityChange = () => {
+        document.title = document.hidden
+          ? "⚠ Don't miss out on my work!"
+          : 'Santiago Cervan - Front end';
+      };
+      document.addEventListener('visibilitychange', handleVisibilityChange);
+      return () => {
+        document.removeEventListener(
+          'visibilitychange',
+          handleVisibilityChange
+        );
+      };
+    }, [spanish]);
+  }
 
   return (
     <>
