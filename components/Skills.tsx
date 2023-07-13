@@ -14,9 +14,15 @@ function Skills({ spanish }: Spanish) {
   });
   return (
     <div className="w-full pl-0 sm:pr-6 md:pl-8 md:pr-44 mix-blend-exclusion text-white flex flex-col sm:flex-row relative">
-      <div className="absolute z-[99999999999] left-3/4 top-1/2 animate-pulse select-none ">
-        <Image src={pulsa} alt="pulsa" />
-      </div>
+      <motion.div
+        initial={{ scale: 1 }}
+        whileInView={{ scale: 0 }}
+        transition={{ duration: 0.5, delay: 6 }}
+        viewport={{ once: true }}
+        className="absolute z-[99999999999] left-3/4 top-1/2 animate-pulse-fast select-none "
+      >
+        <Image src={pulsa} alt="pulsa" width={50} />
+      </motion.div>
       {spanish ? (
         <div className="hidden sm:flex text-vertical transform -rotate-90 w-60 self-start h-0 mt-[25rem]">
           <motion.p

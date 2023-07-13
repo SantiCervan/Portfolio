@@ -125,7 +125,7 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
       <div className="flex w-4/5 pb-12 justify-between ">
         {spanish ? (
           <a
-            className="mix-blend-exclusion text-white hover:text-teal-500 text-3xl underline underline-offset-4 font-serif animate-pulse"
+            className="mix-blend-exclusion text-white hover:text-teal-500 text-3xl underline underline-offset-4 font-serif animate-pulse-fast"
             href="./Santiago Cervan CV.pdf"
             target="_blank"
           >
@@ -133,7 +133,7 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
           </a>
         ) : (
           <a
-            className="mix-blend-exclusion text-white hover:text-teal-500 text-3xl underline underline-offset-4 font-serif animate-pulse"
+            className="mix-blend-exclusion text-white hover:text-teal-500 text-3xl underline underline-offset-4 font-serif animate-pulse-fast"
             href="./Santiago Cervan CV English.pdf"
             target="_blank"
           >
