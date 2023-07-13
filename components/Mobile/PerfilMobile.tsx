@@ -13,7 +13,7 @@ function PerfilMobile({ spanish }: Spanish) {
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 100 }}
             transition={{ duration: 1 }}
-            className="text-[4rem] xs:text-[5rem] font-bold mix-blend-exclusion text-white"
+            className="text-[4rem] xs:text-[4.7rem] font-bold mix-blend-exclusion text-white break-words"
           >
             Santiago Cervan
           </motion.h1>
@@ -21,7 +21,11 @@ function PerfilMobile({ spanish }: Spanish) {
             initial={{ y: 160, opacity: 0 }}
             animate={{ y: 0, opacity: 100 }}
             transition={{ duration: 1.2 }}
-            className="text-[3rem] xs:text-[4rem] font-semibold pl-3 mix-blend-exclusion text-white z-40 absolute w-full leading-tight break-words"
+            className={`${
+              spanish
+                ? 'text-[2.5rem] xs:text-[3rem]'
+                : 'text-[3rem] xs:text-[4rem]'
+            } font-semibold pl-3 mix-blend-exclusion text-white z-40 absolute leading-tight break-words`}
           >
             {spanish ? 'Desarrollador Front End' : 'Front End Developer'}
           </motion.h2>

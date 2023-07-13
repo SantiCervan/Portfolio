@@ -11,7 +11,7 @@ function Skills({ spanish }: Spanish) {
     ssr: false,
   });
   return (
-    <div className="w-full sm:pl-8 sm:pr-44 mix-blend-exclusion text-white flex flex-col sm:flex-row">
+    <div className="w-full pl-0 sm:pr-6 md:pl-8 md:pr-44 mix-blend-exclusion text-white flex flex-col sm:flex-row">
       {spanish ? (
         <div className="hidden sm:flex text-vertical transform -rotate-90 w-60 self-start h-0 mt-[25rem]">
           <motion.p
@@ -19,7 +19,7 @@ function Skills({ spanish }: Spanish) {
             whileInView={{ y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="uppercase text-[5rem] font-bold mix-blend-exclusion text-white"
+            className="uppercase text-[3rem] md:text-[5rem] font-bold mix-blend-exclusion text-white"
           >
             Habilidades
           </motion.p>
@@ -31,7 +31,7 @@ function Skills({ spanish }: Spanish) {
             whileInView={{ y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="uppercase text-[5rem] font-bold mix-blend-exclusion text-white"
+            className="uppercase text-[3rem] md:text-[5rem] font-bold mix-blend-exclusion text-white"
           >
             Skills
           </motion.p>
@@ -43,7 +43,7 @@ function Skills({ spanish }: Spanish) {
           whileInView={{ y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="uppercase text-[2rem] font-bold mix-blend-exclusion text-white"
+          className="uppercase text-[2rem] font-bold mix-blend-exclusion text-white border-b-4 w-full md:border-b-0 md:w-auto"
         >
           {spanish ? 'Habilidades' : 'Skills'}
         </motion.p>
