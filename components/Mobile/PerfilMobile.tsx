@@ -55,14 +55,6 @@ function PerfilMobile({ spanish }: Spanish) {
         </div>
       </div>
       <div className={`h-[10%] w-full flex-col justify-between relative`}>
-        <motion.div
-          initial={{ y: 160, opacity: 0 }}
-          animate={{ y: 0, opacity: 100 }}
-          transition={{ duration: 1, delay: 4 }}
-          className="animate-bounce absolute -top-5 right-1 mix-blend-exclusion"
-        >
-          <Image src={scroll} alt="Scroll" width={40} height={40} />
-        </motion.div>
         <p className="uppercase font-semibold mix-blend-exclusion text-white">
           {spanish ? 'Argentino' : 'From Argentina'}
         </p>

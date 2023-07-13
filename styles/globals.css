@@ -14,7 +14,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #888888bd;
+  background-color: #000000;
   /* Color del pulgar de la barra de desplazamiento */
 }
 
@@ -23,7 +23,7 @@
 /* Se requiere Firefox 64 o superior para el soporte completo de la personalización de la barra de desplazamiento */
 /* Si utilizas una versión anterior, el color del pulgar de la barra de desplazamiento no se cambiará */
 * {
-  scrollbar-color: #888888bd #f1f1f1;
+  scrollbar-color: #000000 #f1f1f1;
   /* Color del pulgar y fondo de la barra de desplazamiento */
 }
 
@@ -33,7 +33,7 @@
 * {
   scrollbar-width: thin;
   /* Ancho de la barra de desplazamiento */
-  scrollbar-color: #888888bd #f1f1f1;
+  scrollbar-color: #000000 #f1f1f1;
   /* Color del pulgar y fondo de la barra de desplazamiento */
 }
 

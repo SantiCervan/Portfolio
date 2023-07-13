@@ -5,7 +5,9 @@ import Perfil from './Perfil';
 import Head from 'next/head';
 import Skills from './Skills';
 import Experience from './Experience';
-
+import scroll from '../public/Icons/abajo.png';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 function index() {
   const [darkMode, setDarkMode] = useState(false);
   const [spanish, setSpanish] = useState(false);
@@ -59,6 +61,14 @@ function index() {
             : 'bg-gradient-to-b from-slate-200 to-teal-100'
         }`}
       >
+        <motion.div
+          initial={{ y: 160, opacity: 0 }}
+          animate={{ y: 0, opacity: 100 }}
+          transition={{ delay: 3 }}
+          className="animate-bounce fixed bottom-0 right-0 mix-blend-exclusion top-[9999]"
+        >
+          <Image src={scroll} alt="Scroll" width={40} height={40} />
+        </motion.div>
         <NavBar
           setDarkMode={setDarkMode}
           darkMode={darkMode}
@@ -66,8 +76,8 @@ function index() {
           spanish={spanish}
         />
         <Perfil spanish={spanish} />
-        <Skills spanish={spanish} />
         <Experience darkMode={darkMode} spanish={spanish} />
+        <Skills spanish={spanish} />
       </div>
     </>
   );

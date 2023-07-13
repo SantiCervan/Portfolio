@@ -4,7 +4,6 @@ import Photo from '../public/Img/20211120_152652-02 (1)-01.jpeg';
 import { motion } from 'framer-motion';
 import { Spanish } from './entities/generals';
 import PerfilMobile from './Mobile/PerfilMobile';
-import scroll from '../public/Icons/abajo.png';
 function Perfil({ spanish }: Spanish) {
   return (
     <>
@@ -49,14 +48,6 @@ function Perfil({ spanish }: Spanish) {
           </div>
         </div>
         <div className="h-[10%] w-full flex justify-between relative mix-blend-exclusion">
-          <motion.div
-            initial={{ y: 160, opacity: 0 }}
-            animate={{ y: 0, opacity: 100 }}
-            transition={{ delay: 3 }}
-            className="animate-bounce absolute bottom-0 left-1/2"
-          >
-            <Image src={scroll} alt="Scroll" width={40} height={40} />
-          </motion.div>
           <p className="uppercase text-lg font-semibold mix-blend-exclusion text-white">
             {spanish ? 'Argentino' : 'From Argentina'}
           </p>
