@@ -204,14 +204,10 @@ const Graph = () => {
   }, []);
 
   return (
-    <motion.div
-      initial={{ y: 100 }}
-      whileInView={{ y: 0 }}
-      transition={{ duration: 1 }}
-      viewport={{ once: true }}
+    <div
       ref={containerRef}
       style={{ height: '80vh' }}
-      className="w-full"
+      className="w-full cursor-pointer"
     />
   );
 };
