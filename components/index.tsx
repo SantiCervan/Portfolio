@@ -8,6 +8,7 @@ import Experience from './Experience';
 import scroll from '../public/Icons/abajo.png';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Contact from './Contact';
 function index() {
   const [darkMode, setDarkMode] = useState(false);
   const [spanish, setSpanish] = useState(false);
@@ -78,6 +79,7 @@ function index() {
         <Perfil spanish={spanish} />
         <Experience darkMode={darkMode} spanish={spanish} />
         <Skills spanish={spanish} />
+        <Contact spanish={spanish} />
       </div>
     </>
   );

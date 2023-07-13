@@ -17,7 +17,7 @@ function Perfil({ spanish }: Spanish) {
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 100 }}
               transition={{ duration: 1 }}
-              className="text-[6rem] font-bold mix-blend-exclusion text-white"
+              className="text-[6rem] font-bold mix-blend-exclusion text-white cursor-default hover:text-red-500 transition-colors"
             >
               Santiago Cervan
             </motion.h1>
@@ -25,7 +25,7 @@ function Perfil({ spanish }: Spanish) {
               initial={{ y: 160, opacity: 0 }}
               animate={{ y: 0, opacity: 100 }}
               transition={{ duration: 1.2 }}
-              className="text-[4rem] font-semibold pl-3 mix-blend-exclusion text-white z-40 absolute w-1/2"
+              className="text-[4rem] font-semibold pl-3 mix-blend-exclusion text-white z-40 absolute w-1/2 cursor-default hover:text-teal-500 transition-colors"
             >
               {spanish ? 'Desarrollador Front End' : 'Front End Developer'}
             </motion.h2>
@@ -48,10 +48,10 @@ function Perfil({ spanish }: Spanish) {
           </div>
         </div>
         <div className="h-[10%] w-full flex justify-between relative mix-blend-exclusion">
-          <p className="uppercase text-lg font-semibold mix-blend-exclusion text-white">
+          <p className="uppercase text-lg font-semibold mix-blend-exclusion text-white cursor-default">
             {spanish ? 'Argentino' : 'From Argentina'}
           </p>
-          <p className="uppercase text-lg font-semibold mix-blend-exclusion text-white">
+          <p className="uppercase text-lg font-semibold mix-blend-exclusion text-white cursor-default">
             {spanish
               ? 'Disponible para empresas de todo el mundo'
               : 'Available to companies anywhere in the world'}

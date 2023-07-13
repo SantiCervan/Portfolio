@@ -19,7 +19,7 @@ function Skills({ spanish }: Spanish) {
             whileInView={{ y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="uppercase text-[3rem] md:text-[5rem] font-bold mix-blend-exclusion text-white"
+            className="uppercase text-[3rem] md:text-[5rem] font-bold mix-blend-exclusion text-white cursor-default"
           >
             Habilidades
           </motion.p>
@@ -31,7 +31,7 @@ function Skills({ spanish }: Spanish) {
             whileInView={{ y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="uppercase text-[3rem] md:text-[5rem] font-bold mix-blend-exclusion text-white"
+            className="uppercase text-[3rem] md:text-[5rem] font-bold mix-blend-exclusion text-white cursor-default"
           >
             Skills
           </motion.p>

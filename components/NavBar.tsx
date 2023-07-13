@@ -21,6 +21,12 @@ function NavBar({ setDarkMode, darkMode, setSpanish, spanish }: Generals) {
     setIsHoveredSwitch(false);
   };
   const toggleSwitch = () => setDarkMode(!darkMode);
+  function scrollToBottom() {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth',
+    });
+  }
   return (
     <>
       <div className="w-full flex sm:hidden">
@@ -36,9 +42,10 @@ function NavBar({ setDarkMode, darkMode, setSpanish, spanish }: Generals) {
           initial={{ width: 170 }}
           animate={isHovered ? { width: 170 } : { width: 67 }}
           transition={{ duration: 1 }}
-          className="flex gap-1 text-lg font-semibold px-4 py-2 border-4 border-white cursor-default h-13 non-selectable"
+          className="flex gap-1 text-lg font-semibold px-4 py-2 border-4 border-white cursor-default h-13 non-selectable cursor-pointer"
           onMouseEnter={handleHover}
           onMouseLeave={handleMouseLeave}
+          onClick={() => scrollToBottom()}
         >
           <div className="flex">
             <p>S</p>

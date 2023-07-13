@@ -211,7 +211,7 @@ const Graph = () => {
       viewport={{ once: true }}
       ref={containerRef}
       style={{ height: '80vh' }}
-      className="w-full"
+      className="w-full cursor-pointer"
     />
   );
 };

@@ -2,7 +2,6 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
-import Image from 'next/image';
 import { DarkSpanish } from './entities/generals';
 import weeki from '../public/Img/Weeki.jpg';
 import iunctus from '../public/Img/Iunctus.jpg';
@@ -25,7 +24,6 @@ import bootstrap from '../public/Icons/bootstrap.png';
 import bootstrapDark from '../public/Icons/bootstrapDark.png';
 import javascript from '../public/Icons/javascript.png';
 import javascriptDark from '../public/Icons/javascriptDark.png';
-
 import { motion } from 'framer-motion';
 import ExpCards from './ExpCards';
 function Experience({ darkMode, spanish }: DarkSpanish) {
@@ -37,7 +35,7 @@ function Experience({ darkMode, spanish }: DarkSpanish) {
           whileInView={{ y: 0, opacity: 100 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="text-[2rem] md:text-[3rem] lg:text-[4rem] font-bold leading-[4rem] pb-3 text-white uppercase"
+          className="text-[2rem] md:text-[3rem] lg:text-[4rem] font-bold leading-[4rem] pb-3 text-white uppercase cursor-default"
         >
           {spanish ? 'Experiencia' : 'Experience'}
         </motion.p>
