@@ -26,12 +26,12 @@ function Perfil({ spanish }: Spanish) {
               initial={{ y: 160, opacity: 0 }}
               animate={{ y: 0, opacity: 100 }}
               transition={{ duration: 1.2 }}
-              className="text-[4rem] font-semibold pl-3 mix-blend-exclusion text-white"
+              className="text-[4rem] font-semibold pl-3 mix-blend-exclusion text-white z-40 absolute w-1/2"
             >
               {spanish ? 'Desarrollador Front End' : 'Front End Developer'}
             </motion.h2>
           </div>
-          <div className="h-full w-[40%] flex justify-end items-center pr-4">
+          <div className="h-full w-[40%] flex justify-end items-center pr-4 z-0">
             <motion.div
               initial={{ x: 160, opacity: 0, rotate: 5 }}
               animate={{ x: 0, opacity: 100, rotate: 0 }}
