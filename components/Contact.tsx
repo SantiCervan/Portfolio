@@ -16,21 +16,13 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
           whileInView={{ opacity: 100 }}
           viewport={{ once: true }}
           transition={{ duration: 1.2, delay: 1.6 }}
-          className="absolute bottom-24 right-20 animate-spin-slow transition-all cursor-pointer"
+          className="absolute md:bottom-24 bottom-16 right-6 md:right-20 animate-spin-slow transition-all cursor-pointer w-24 md:w-62"
           href="mailto:santicervan@live.com"
         >
-          {spanish && darkMode && (
-            <Image src={EspD} alt="getintouch" width={200} />
-          )}
-          {spanish && !darkMode && (
-            <Image src={Esp} alt="getintouch" width={200} />
-          )}
-          {!spanish && !darkMode && (
-            <Image src={Ing} alt="getintouch" width={200} />
-          )}
-          {!spanish && darkMode && (
-            <Image src={IngD} alt="getintouch" width={200} />
-          )}
+          {spanish && darkMode && <Image src={EspD} alt="getintouch" />}
+          {spanish && !darkMode && <Image src={Esp} alt="getintouch" />}
+          {!spanish && !darkMode && <Image src={Ing} alt="getintouch" />}
+          {!spanish && darkMode && <Image src={IngD} alt="getintouch" />}
         </motion.a>
         <div className="mix-blend-exclusion border-b-4 border-white mb-0 md:mb-2">
           <motion.p
@@ -43,14 +35,14 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
             {spanish ? 'Contacto' : 'Contact'}
           </motion.p>
         </div>
-        <div className="flex">
+        <div className="flex flex-col md:flex-row">
           <div className="flex flex-col w-3/4">
             <motion.h1
               initial={{ y: -100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 100 }}
               viewport={{ once: true }}
               transition={{ duration: 1 }}
-              className="text-[6rem] font-semibold mix-blend-exclusion text-white cursor-default"
+              className="text-[3rem] leading-[3rem] md:leading-normal md:text-[6rem] font-semibold mix-blend-exclusion text-white cursor-default"
             >
               Santiago Cervan
             </motion.h1>
@@ -59,7 +51,7 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
               whileInView={{ y: 0, opacity: 100 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2 }}
-              className="text-[3rem] font-bold pl-1 mix-blend-exclusion text-white -mt-4 cursor-default"
+              className="text-[2rem] md:text-[3rem] leading-[2rem] mt-4 md:leading-normal font-bold md:pl-1 mix-blend-exclusion text-white md:-mt-4 cursor-default"
             >
               {spanish ? '>Desarrollador Front End' : '>Front End Developer'}
             </motion.h2>
@@ -68,7 +60,7 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
               whileInView={{ y: 0, opacity: 100 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2 }}
-              className="text-[4rem] mix-blend-exclusion hover:text-red-500 font-serif font-thin text-teal-500 pl-5 transition-colors"
+              className="text-[1.7rem] xs:text-[2rem] md:text-[4rem] mt-2 md:mt-0 mix-blend-exclusion hover:text-red-500 font-serif font-thin text-teal-500 pl-1 md:pl-5 transition-colors"
               href="mailto:santicervan@live.com"
             >
               santicervan@live.com
@@ -78,7 +70,7 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
               whileInView={{ scale: 1, opacity: 100 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2 }}
-              className="text-[6rem] mix-blend-exclusion text-white font-serif font-thin -mt-3 hover:text-red-500 transition-colors"
+              className="text-[2rem] md:text-[6rem] pl-2 mix-blend-exclusion hover:text-red-500  md:text-white font-serif font-thin md:-mt-3 md:hover:text-red-500 transition-colors"
               href="https://wa.me/543517380506"
               target="_blank"
             >
@@ -91,7 +83,7 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
               whileInView={{ x: 0, opacity: 100 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 1 }}
-              className="text-[6rem] mix-blend-exclusion text-white font-semibold -mt-3 hover:text-red-500 pt-4 transition-colors"
+              className="text-[1.5rem] pl-2 md:text-[6rem] mix-blend-exclusion text-white font-semibold md:-mt-3 hover:text-red-500 pt-4 transition-colors"
               href="https://gitlab.com/SantiCervan"
               target="_blank"
             >
@@ -102,7 +94,7 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
               whileInView={{ x: 0, opacity: 100 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, delay: 1.2 }}
-              className="text-[6rem] mix-blend-exclusion text-white font-bold -mt-12 hover:text-red-500 pt-4 transition-colors"
+              className="text-[1.5rem] pl-2 md:text-[6rem] mix-blend-exclusion text-white font-bold md:-mt-12 hover:text-red-500 pt-4 transition-colors"
               href="https://www.linkedin.com/in/santicervan/"
               target="_blank"
             >
@@ -113,7 +105,7 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
               whileInView={{ x: 0, opacity: 100 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, delay: 1.4 }}
-              className="text-[6rem] mix-blend-exclusion text-white font-semibold -mt-12 hover:text-red-500 pt-4 transition-colors"
+              className="text-[1.5rem] pl-2 md:text-[6rem] mix-blend-exclusion text-white font-semibold md:-mt-12 hover:text-red-500 pt-4 transition-colors"
               href="https://github.com/SantiCervan"
               target="_blank"
             >
@@ -122,10 +114,10 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
           </div>
         </div>
       </div>
-      <div className="flex w-4/5 pb-12 justify-between ">
+      <div className="flex flex-col md:flex-row w-full pl-2 md:pl-0 gap-2 md:gap-0 mt-4 md:mt-0 md:w-4/5 pb-4 md:pb-12 justify-between ">
         {spanish ? (
           <a
-            className="mix-blend-exclusion text-white hover:text-teal-500 text-3xl underline underline-offset-4 font-serif animate-pulse-fast"
+            className="mix-blend-exclusion text-white hover:text-teal-500 text-xl md:text-3xl underline underline-offset-4 font-serif animate-pulse-fast"
             href="./Santiago Cervan CV.pdf"
             target="_blank"
           >
@@ -133,7 +125,7 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
           </a>
         ) : (
           <a
-            className="mix-blend-exclusion text-white hover:text-teal-500 text-3xl underline underline-offset-4 font-serif animate-pulse-fast"
+            className="mix-blend-exclusion text-white hover:text-teal-500 text-xl md:text-3xl underline underline-offset-4 font-serif animate-pulse-fast"
             href="./Santiago Cervan CV English.pdf"
             target="_blank"
           >

@@ -15,17 +15,17 @@ function Clock({ spanish }: Spanish) {
   return (
     <div className="pt-2 cursor-default">
       {spanish ? (
-        <h1 className="text-2xl mix-blend-exclusion text-white">
+        <h1 className="md:text-2xl mix-blend-exclusion text-white">
           Son las{' '}
-          <span className="font-semibold text-3xl font-mono ">
+          <span className="font-semibold text-lg md:text-3xl font-mono ">
             {currentTime}
           </span>{' '}
           en Argentina!
         </h1>
       ) : (
-        <h1 className="text-2xl mix-blend-exclusion text-white">
+        <h1 className="md:text-2xl mix-blend-exclusion text-white">
           {"It's"}{' '}
-          <span className="font-semibold text-3xl font-mono ">
+          <span className="font-semibold text-lg md:text-3xl font-mono ">
             {currentTime}
           </span>{' '}
           in Argentina!
