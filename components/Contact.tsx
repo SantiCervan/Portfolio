@@ -1,10 +1,37 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Spanish } from './entities/generals';
-function Contact({ spanish }: Spanish) {
+import { DarkSpanish } from './entities/generals';
+import Clock from './Clock';
+import Image from 'next/image';
+import Esp from '../public/Icons/Esp.png';
+import EspD from '../public/Icons/EspD.png';
+import Ing from '../public/Icons/Ing.png';
+import IngD from '../public/Icons/IngD.png';
+function Contact({ darkMode, spanish }: DarkSpanish) {
   return (
     <>
-      <div className="flex flex-col w-full md:w-4/5 h-[97vh] sm:h-[92vh] pt-12 text-white xs:pb-8 sm:pb-2">
+      <div className="flex flex-col w-full md:w-4/5 h-[97vh] sm:h-[92vh] pt-12 text-white xs:pb-8 sm:pb-2 relative">
+        <motion.a
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 100 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2, delay: 1.6 }}
+          className="absolute bottom-24 right-20 animate-spin-slow transition-all cursor-pointer"
+          href="mailto:santicervan@live.com"
+        >
+          {spanish && darkMode && (
+            <Image src={EspD} alt="getintouch" width={200} />
+          )}
+          {spanish && !darkMode && (
+            <Image src={Esp} alt="getintouch" width={200} />
+          )}
+          {!spanish && !darkMode && (
+            <Image src={Ing} alt="getintouch" width={200} />
+          )}
+          {!spanish && darkMode && (
+            <Image src={IngD} alt="getintouch" width={200} />
+          )}
+        </motion.a>
         <div className="mix-blend-exclusion border-b-4 border-white mb-0 md:mb-2">
           <motion.p
             initial={{ y: 100, opacity: 0 }}
@@ -95,10 +122,10 @@ function Contact({ spanish }: Spanish) {
           </div>
         </div>
       </div>
-      <div className="flex w-4/5 pb-12">
+      <div className="flex w-4/5 pb-12 justify-between ">
         {spanish ? (
           <a
-            className="mix-blend-exclusion text-white text-3xl underline underline-offset-4 font-serif"
+            className="mix-blend-exclusion text-white hover:text-teal-500 text-3xl underline underline-offset-4 font-serif animate-pulse"
             href="./Santiago Cervan CV.pdf"
             target="_blank"
           >
@@ -106,13 +133,14 @@ function Contact({ spanish }: Spanish) {
           </a>
         ) : (
           <a
-            className="mix-blend-exclusion text-white text-3xl underline underline-offset-4 font-serif"
+            className="mix-blend-exclusion text-white hover:text-teal-500 text-3xl underline underline-offset-4 font-serif animate-pulse"
             href="./Santiago Cervan CV English.pdf"
             target="_blank"
           >
             Download 2023 CV
           </a>
         )}
+        <Clock spanish={spanish} />
       </div>
     </>
   );

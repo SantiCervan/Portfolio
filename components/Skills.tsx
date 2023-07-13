@@ -2,6 +2,8 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import { Spanish } from './entities/generals';
+import Image from 'next/image';
+import pulsa from '../public/Icons/pulsa.png';
 
 function Skills({ spanish }: Spanish) {
   const DynamicGraph = dynamic(() => import('./Graph'), {
@@ -11,7 +13,10 @@ function Skills({ spanish }: Spanish) {
     ssr: false,
   });
   return (
-    <div className="w-full pl-0 sm:pr-6 md:pl-8 md:pr-44 mix-blend-exclusion text-white flex flex-col sm:flex-row">
+    <div className="w-full pl-0 sm:pr-6 md:pl-8 md:pr-44 mix-blend-exclusion text-white flex flex-col sm:flex-row relative">
+      <div className="absolute z-[99999999999] left-3/4 top-1/2 animate-pulse select-none ">
+        <Image src={pulsa} alt="pulsa" />
+      </div>
       {spanish ? (
         <div className="hidden sm:flex text-vertical transform -rotate-90 w-60 self-start h-0 mt-[25rem]">
           <motion.p

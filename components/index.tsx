@@ -9,9 +9,10 @@ import scroll from '../public/Icons/abajo.png';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Contact from './Contact';
+
 function index() {
   const [darkMode, setDarkMode] = useState(false);
-  const [spanish, setSpanish] = useState(false);
+  const [spanish, setSpanish] = useState(true);
 
   if (spanish) {
     useEffect(() => {
@@ -44,6 +45,13 @@ function index() {
       };
     }, [spanish]);
   }
+  useEffect(() => {
+    if (typeof window !== 'undefined' && typeof navigator !== 'undefined') {
+      if (navigator?.language.startsWith('en')) {
+        setSpanish(false);
+      }
+    }
+  }, []);
 
   return (
     <>
@@ -66,7 +74,7 @@ function index() {
           initial={{ y: 160, opacity: 0 }}
           animate={{ y: 0, opacity: 100 }}
           transition={{ delay: 3 }}
-          className="animate-bounce fixed bottom-0 right-0 mix-blend-exclusion top-[9999]"
+          className="animate-bounce fixed bottom-3 right-8 mix-blend-exclusion top-[9999]"
         >
           <Image src={scroll} alt="Scroll" width={40} height={40} />
         </motion.div>
@@ -79,7 +87,7 @@ function index() {
         <Perfil spanish={spanish} />
         <Experience darkMode={darkMode} spanish={spanish} />
         <Skills spanish={spanish} />
-        <Contact spanish={spanish} />
+        <Contact darkMode={darkMode} spanish={spanish} />
       </div>
     </>
   );

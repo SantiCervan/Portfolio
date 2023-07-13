@@ -42,7 +42,7 @@ function NavBar({ setDarkMode, darkMode, setSpanish, spanish }: Generals) {
           initial={{ width: 170 }}
           animate={isHovered ? { width: 170 } : { width: 67 }}
           transition={{ duration: 1 }}
-          className="flex gap-1 text-lg font-semibold px-4 py-2 border-4 border-white cursor-default h-13 non-selectable cursor-pointer"
+          className="flex gap-1 text-lg font-semibold px-4 py-2 border-4 border-white h-13 non-selectable cursor-pointer"
           onMouseEnter={handleHover}
           onMouseLeave={handleMouseLeave}
           onClick={() => scrollToBottom()}
