@@ -52,6 +52,15 @@ function index() {
       }
     }
   }, []);
+  useEffect(() => {
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', spanish
+        ? "Desarrollador Front End con experiencia en diseño web adaptable, optimización de rendimiento y SEO. Con proyectos destacados como Voike, Omuni y Electa, ofrezco experiencia en JavaScript, TypeScript, React, React Native, NextJs, Figma, etc. proporcionando interfaces amigables y gestión eficiente de Git Flow."
+        : "Experienced Front End Developer specializing in responsive web design, performance optimization, and SEO. With a proven track record in projects like Voike, Omuni, and Electa, I offer expertise in JavaScript, TypeScript, React, React Native, NextJs, Figma, etc. delivering user-friendly interfaces and efficient Git Flow management.");
+    }
+  }, [spanish]);
+  
   function scrollToBottom() {
     window.scrollTo({
       top: document.documentElement.scrollHeight,
