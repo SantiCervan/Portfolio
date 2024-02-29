@@ -18,7 +18,7 @@ function index() {
     useEffect(() => {
       const handleVisibilityChange = () => {
         document.title = document.hidden
-          ? '¡No te pierdas mi trabajo!'
+          ? '¡No te pierdas mi portafolio! 😉'
           : 'Santiago Cervan - Front end';
       };
       document.addEventListener('visibilitychange', handleVisibilityChange);
@@ -33,7 +33,7 @@ function index() {
     useEffect(() => {
       const handleVisibilityChange = () => {
         document.title = document.hidden
-          ? "Don't miss out on my work!"
+          ? "Don't miss my portfolio! 😉"
           : 'Santiago Cervan - Front end';
       };
       document.addEventListener('visibilitychange', handleVisibilityChange);
@@ -82,7 +82,13 @@ function index() {
           transition={{ delay: 3 }}
           className="animate-bounce fixed bottom-3 right-8 mix-blend-exclusion top-[9999]"
         >
-          <Image src={scroll} alt="Scroll" width={40} height={40} onClick={() => scrollToBottom()}/>
+          <Image
+            src={scroll}
+            alt="Scroll"
+            width={40}
+            height={40}
+            onClick={() => scrollToBottom()}
+          />
         </motion.div>
         <NavBar
           setDarkMode={setDarkMode}

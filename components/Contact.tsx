@@ -55,7 +55,7 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
             whileInView={{ y: 0, opacity: 100 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="text-[2rem] xl:text-[3rem] lg:text-[4rem] font-bold leading-[4rem] pb-3 text-white uppercase cursor-default"
+            className="text-[2rem] md:text-[2.5rem] 2xl:text-[5rem] font-bold leading-[4rem] pb-3 text-white uppercase cursor-default"
           >
             {spanish ? 'Contacto' : 'Contact'}
           </motion.p>

@@ -4,16 +4,17 @@ import Photo from '../../public/Img/20211120_152652-02 (1)-01.jpeg';
 import { motion } from 'framer-motion';
 import { Spanish } from '../entities/generals';
 import scroll from '../../public/Icons/abajo.png';
+import SkillsCarrusel from '../SkillsCarrusel';
 function PerfilMobile({ spanish }: Spanish) {
   return (
-    <div className="w-full px-1 h-screen pt-20 text-white">
+    <div className="w-full px-2 xs:px-4 h-screen pt-20 text-white">
       <div className="h-[80%] xs:h-[90%] w-full flex flex-col items-end">
-        <div className="w-full">
+        <div className="w-full flex flex-col gap-6">
           <motion.h1
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 100 }}
             transition={{ duration: 1 }}
-            className="text-[4rem] xs:text-[4.7rem] font-bold mix-blend-exclusion text-white break-words"
+            className="text-[3rem] xs:text-[3.7rem] pl-3 font-bold mix-blend-exclusion text-white break-words"
           >
             Santiago Cervan
           </motion.h1>
@@ -24,11 +25,12 @@ function PerfilMobile({ spanish }: Spanish) {
             className={`${
               spanish
                 ? 'text-[2.5rem] xs:text-[3rem]'
-                : 'text-[3rem] xs:text-[4rem]'
-            } font-semibold pl-3 mix-blend-exclusion text-white z-40 absolute leading-tight break-words`}
+                : 'text-[2rem] xs:text-[3rem]'
+            } font-semibold pl-3 mix-blend-exclusion text-teal-500 leading-tight break-words`}
           >
             {spanish ? 'Desarrollador Front End' : 'Front End Developer'}
           </motion.h2>
+          <SkillsCarrusel />
         </div>
         <div className="h-full w-[40%] flex justify-end items-end pt-20 xs:pt-36 z-0">
           <motion.div

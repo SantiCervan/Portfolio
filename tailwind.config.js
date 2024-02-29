@@ -15,6 +15,18 @@ module.exports = {
       animation: {
         'spin-slow': 'spin 10s linear infinite',
         'pulse-fast': 'pulse 1s infinite',
+        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+        'infinite-scroll-reverse': 'infinite-scroll-reverse 25s linear infinite',
+      },
+      keyframes: {
+        'infinite-scroll': {
+          from: { transform: 'translateX(0%)' },
+          to: { transform: 'translateX(-100%)' },
+        },
+        'infinite-scroll-reverse': {
+          from: { transform: 'translateX(-100%)' },
+          to: { transform: 'translateX(0%)' },
+        },
       }
     },
     screens: {
