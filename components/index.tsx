@@ -52,6 +52,12 @@ function index() {
       }
     }
   }, []);
+  function scrollToBottom() {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth',
+    });
+  }
 
   return (
     <>
@@ -76,7 +82,7 @@ function index() {
           transition={{ delay: 3 }}
           className="animate-bounce fixed bottom-3 right-8 mix-blend-exclusion top-[9999]"
         >
-          <Image src={scroll} alt="Scroll" width={40} height={40} />
+          <Image src={scroll} alt="Scroll" width={40} height={40} onClick={() => scrollToBottom()}/>
         </motion.div>
         <NavBar
           setDarkMode={setDarkMode}

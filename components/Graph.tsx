@@ -113,23 +113,30 @@ const Graph = () => {
           shape: 'image',
           image: '/Icons/figma.png',
         },
+        {
+          id: 18,
+          label: 'React Native',
+          shape: 'image',
+          image: '/Icons/react.png',
+        },
       ]);
       // Crear un DataSet con las aristas (conexiones entre nodos)
       const edges = new DataSet<Edge>([
         { from: 1, to: 4 },
         { from: 4, to: 2 },
         { from: 2, to: 3 },
-        { from: 1, to: 5 },
+        { from: 4, to: 5 },
         { from: 5, to: 6 },
-        { from: 6, to: 7 },
+        { from: 5, to: 7 },
         { from: 1, to: 8 },
         { from: 9, to: 8 },
         { from: 9, to: 12 },
+        { from: 8, to: 18 },
         { from: 1, to: 10 },
         { from: 11, to: 10 },
         { from: 1, to: 13 },
         { from: 15, to: 13 },
-        { from: 14, to: 15 },
+        { from: 14, to: 13 },
         { from: 1, to: 16 },
         { from: 17, to: 16 },
       ]);
