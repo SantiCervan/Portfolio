@@ -55,7 +55,7 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
             whileInView={{ y: 0, opacity: 100 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="text-[2rem] md:text-[2.5rem] 2xl:text-[5rem] font-bold leading-[4rem] pb-3 text-white uppercase cursor-default"
+            className="text-[2rem] md:text-[2.5rem] 2xl:text-[3rem] font-bold leading-[4rem] pb-3 text-white uppercase cursor-default"
           >
             {spanish ? 'Contacto' : 'Contact'}
           </motion.p>
@@ -67,7 +67,7 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
               whileInView={{ y: 0, opacity: 100 }}
               viewport={{ once: true }}
               transition={{ duration: 1 }}
-              className="text-[3rem] sm:text-[4rem] leading-[3rem] sm:leading-[4.5rem] md:leading-normal xl:text-[6rem] font-semibold mix-blend-exclusion text-white cursor-default"
+              className="text-[3rem] md:text-[4rem] 2xl:text-[6rem] leading-[3rem] sm:leading-[4.5rem] md:leading-normal font-semibold mix-blend-exclusion text-white cursor-default"
             >
               Santiago Cervan
             </motion.h1>
@@ -76,7 +76,7 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
               whileInView={{ y: 0, opacity: 100 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2 }}
-              className="text-[2rem] xl:text-[3rem] leading-[2rem] mt-4 xl:leading-normal font-bold xl:pl-1 mix-blend-exclusion text-white xl:-mt-4 cursor-default"
+              className="text-[2rem] 2xl:text-[3rem] leading-[2rem] mt-4 xl:leading-normal font-bold xl:pl-1 mix-blend-exclusion text-white xl:-mt-4 cursor-default"
             >
               {spanish ? '>Desarrollador Front End' : '>Front End Developer'}
             </motion.h2>
@@ -85,7 +85,7 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
               whileInView={{ y: 0, opacity: 100 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, delay: 0.5 }}
-              className="text-[1.7rem] xs:text-[2rem] sm:text-[3rem] xl:text-[4rem] mt-2 xl:mt-0 mix-blend-exclusion hover:text-red-500 font-serif font-thin text-teal-500 pl-1 xl:pl-5 transition-colors"
+              className="text-[1.7rem] xs:text-[2rem] sm:text-[3rem] 2xl:text-[4rem] mt-2 xl:mt-0 mix-blend-exclusion hover:text-red-500 font-serif font-thin text-teal-500 pl-1 xl:pl-5 transition-colors"
               href="mailto:santicervan@live.com"
             >
               santicervan@live.com
@@ -115,7 +115,7 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
               whileInView={{ x: 0, opacity: 100 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 1 }}
-              className="text-[1.5rem] pl-2 xs:text-[2rem] sm:text-[2.5rem] xl:text-[6rem] mix-blend-exclusion text-white font-semibold xl:-mt-3 hover:text-red-500 pt-4 transition-colors"
+              className="text-[1.5rem] pl-2 xs:text-[2rem] sm:text-[2.5rem] lg:text-[5rem] 2xl:text-[6rem] mix-blend-exclusion text-white font-semibold xl:-mt-3 hover:text-red-500 pt-4 transition-colors"
               href="https://gitlab.com/SantiCervan"
               target="_blank"
             >
@@ -126,7 +126,7 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
               whileInView={{ x: 0, opacity: 100 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, delay: 1.2 }}
-              className="text-[1.5rem] pl-2 xs:text-[2rem] sm:text-[2.5rem] xl:text-[6rem] mix-blend-exclusion text-white font-bold xl:-mt-12 hover:text-red-500 pt-4 transition-colors"
+              className="text-[1.5rem] pl-2 xs:text-[2rem] sm:text-[2.5rem] lg:text-[5rem] 2xl:text-[6rem] mix-blend-exclusion text-white font-bold xl:-mt-12 hover:text-red-500 pt-4 transition-colors"
               href="https://www.linkedin.com/in/santicervan/"
               target="_blank"
             >
@@ -137,7 +137,7 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
               whileInView={{ x: 0, opacity: 100 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, delay: 1.4 }}
-              className="text-[1.5rem] pl-2 xs:text-[2rem] sm:text-[2.5rem] xl:text-[6rem] mix-blend-exclusion text-white font-semibold xl:-mt-12 hover:text-red-500 pt-4 transition-colors"
+              className="text-[1.5rem] pl-2 xs:text-[2rem] sm:text-[2.5rem] lg:text-[5rem] 2xl:text-[6rem] mix-blend-exclusion text-white font-semibold xl:-mt-12 hover:text-red-500 pt-4 transition-colors"
               href="https://github.com/SantiCervan"
               target="_blank"
             >

@@ -28,14 +28,14 @@ import { motion } from 'framer-motion';
 import ExpCards from './ExpCards';
 function Experience({ darkMode, spanish }: DarkSpanish) {
   return (
-    <div className="inline w-full md:w-4/5 h-screen pt-12 text-white xs:pb-8 sm:pb-2">
+    <div className="inline w-full md:w-4/5 pt-12 text-white xs:pb-8 sm:pb-2">
       <div className="mix-blend-exclusion border-b-4 border-white mb-0 md:mb-12">
         <motion.p
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 100 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="text-[2rem] md:text-[2.5rem] 2xl:text-[5rem] font-bold leading-[4rem] pb-3 text-white uppercase cursor-default"
+          className="text-[2rem] md:text-[2.5rem] 2xl:text-[3rem] font-bold leading-[4rem] pb-3 text-white uppercase cursor-default"
         >
           {spanish ? 'Experiencia' : 'Experience'}
         </motion.p>
