@@ -13,7 +13,7 @@ function Skills({ spanish }: Spanish) {
     ssr: false,
   });
   return (
-    <div className="w-full pl-0 sm:pr-6 md:pl-8 md:pr-44 mix-blend-exclusion text-white flex flex-col sm:flex-row relative">
+    <div className="w-full pl-0 sm:pr-6 md:pl-8 md:pr-44 mix-blend-exclusion text-white flex flex-col sm:flex-row relative px-2 xs:px-4">
       <motion.div
         initial={{ scale: 1 }}
         whileInView={{ scale: 0 }}

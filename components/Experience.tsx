@@ -28,7 +28,7 @@ import { motion } from 'framer-motion';
 import ExpCards from './ExpCards';
 function Experience({ darkMode, spanish }: DarkSpanish) {
   return (
-    <div className="inline w-full md:w-4/5 pt-12 text-white xs:pb-8 sm:pb-2">
+    <div className="inline w-full md:w-4/5 pt-12 text-white xs:pb-8 sm:pb-2 px-2 xs:px-4">
       <div className="mix-blend-exclusion border-b-4 border-white mb-0 md:mb-12">
         <motion.p
           initial={{ y: 100, opacity: 0 }}

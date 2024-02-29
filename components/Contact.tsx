@@ -10,7 +10,7 @@ import IngD from '../public/Icons/IngD.png';
 function Contact({ darkMode, spanish }: DarkSpanish) {
   return (
     <>
-      <div className="flex flex-col w-full sm:w-4/5 h-[97vh] sm:h-[92vh] pt-12 text-white xs:pb-8 sm:pb-2 relative">
+      <div className="flex flex-col w-full sm:w-4/5 h-[97vh] sm:h-[92vh] pt-12 text-white xs:pb-8 sm:pb-2 relative px-2 xs:px-4">
         <a
           className="sm:hidden inline absolute sm:bottom-24 bottom-16 right-6 sm:right-20 animate-spin-slow transition-all cursor-pointer"
           href="mailto:santicervan@live.com"
