@@ -150,7 +150,7 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
         {spanish ? (
           <a
             className="mix-blend-exclusion text-white hover:text-teal-500 text-xl xs:text-2xl xl:text-3xl underline underline-offset-4 font-serif animate-pulse-fast"
-            href="./Santiago Cervan CV.pdf"
+            href="./CV Santiago Cervan Front end.pdf"
             target="_blank"
           >
             Descarga mi CV 2023
@@ -158,7 +158,7 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
         ) : (
           <a
             className="mix-blend-exclusion text-white hover:text-teal-500 text-xl xl:text-3xl underline underline-offset-4 font-serif animate-pulse-fast"
-            href="./Santiago Cervan CV English.pdf"
+            href="./CV English Santiago Cervan Front end.pdf"
             target="_blank"
           >
             Download 2023 CV
