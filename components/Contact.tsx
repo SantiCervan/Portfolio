@@ -95,14 +95,14 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
               whileInView={{ scale: 1, opacity: 100 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2 }}
-              className="text-[2rem] lg:text-[3rem] 2xl:text-[6rem] pl-2 mix-blend-exclusion hover:text-red-500  xl:text-white font-serif font-thin xl:-mt-3 xl:hover:text-red-500 transition-colors xl:inline hidden"
+              className="text-[2rem] lg:text-[3rem] 2xl:text-[6rem] pl-2 mix-blend-exclusion text-red-500 sm:text-red-500 font-serif font-thin xl:-mt-3 sm:hover:text-teal-500 transition-colors xl:inline hidden"
               href="https://wa.me/543517380506"
               target="_blank"
             >
               +54 3517380506
             </motion.a>
             <a
-              className="text-[2rem] xl:text-[6rem] pl-2 mix-blend-exclusion hover:text-red-500  xl:text-white font-serif font-thin xl:-mt-3 xl:hover:text-red-500 transition-colors inline xl:hidden"
+              className="text-[2rem] xl:text-[6rem] pl-2 mix-blend-exclusion text-red-500 font-serif font-thin xl:-mt-3 xl:hover:text-red-500 transition-colors inline xl:hidden"
               href="https://wa.me/543517380506"
               target="_blank"
             >
