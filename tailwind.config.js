@@ -27,6 +27,9 @@ module.exports = {
           from: { transform: 'translateX(-100%)' },
           to: { transform: 'translateX(0%)' },
         },
+      },
+      fontFamily: {
+        'sans': ['Manrope', 'sans-serif'],
       }
     },
     screens: {

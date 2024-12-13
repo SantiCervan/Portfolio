@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* styles/globals.css o styles/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap');
+
+
 /* Cambiar el color de la barra de desplazamiento en WebKit (Chrome, Safari) */
 ::-webkit-scrollbar {
   width: 8px;

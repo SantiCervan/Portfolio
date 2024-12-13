@@ -15,8 +15,8 @@ function NavBar({ setDarkMode, darkMode, setSpanish, spanish }: Generals) {
   return (
     <div className="w-full flex justify-between px-2 xs:px-3 py-6 fixed top-0 mix-blend-exclusion items-center text-white z-50">
       <motion.div
-        initial={{ width: 170 }}
-        animate={{ width: 67 }}
+        initial={{ width: 180 }}
+        animate={{ width: 72 }}
         transition={{ delay: 2, duration: 1.8 }}
         className="flex gap-1 text-lg font-semibold px-4 py-2 border-4 border-white cursor-default h-13 non-selectable"
         onClick={() => scrollToBottom()}
