@@ -153,7 +153,7 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
             href="./CV Santiago Cervan Front end.pdf"
             target="_blank"
           >
-            Descarga mi CV 2024
+            Descarga mi CV
           </a>
         ) : (
           <a
@@ -161,7 +161,7 @@ function Contact({ darkMode, spanish }: DarkSpanish) {
             href="./CV English Santiago Cervan Front end.pdf"
             target="_blank"
           >
-            Download 2024 CV
+            Download my CV
           </a>
         )}
         <Clock spanish={spanish} />
